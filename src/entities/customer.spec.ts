@@ -11,7 +11,7 @@ test('test se nome e igual e a idade e equivalente ao declarado', () => {
         age:25
     })
 
-    
+    expect(customer).toBeInstanceOf(Customer)
     expect(customer.name).toEqual('John Doe')
     expect(customer.age).toEqual(25)
     
