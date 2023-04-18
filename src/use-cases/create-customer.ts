@@ -11,11 +11,10 @@ interface CreateCustomerRequest {
 type CreateCustomerResponse = Customer
 
 
-export class CreateAppointment {
+export class CreateCustomer {
     constructor(
         private customerRepository: CustomerRepository
     ){}
-
 
     async execute({name, cpf, age}: CreateCustomerRequest): Promise<CreateCustomerResponse> {
 

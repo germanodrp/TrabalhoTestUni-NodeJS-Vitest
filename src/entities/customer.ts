@@ -20,11 +20,15 @@ export class Customer {
     }
 
     constructor (props: CustomerProps) {
-       const {age} = props;
+       const { age, cpf } = props;
 
        if(age <= 0 ) {
             throw new Error('invalid age')
         }
+
+       if(cpf.length !== 11){
+            throw new Error('Invalid cpf size')
+       }
 
        this.props = props
     }
